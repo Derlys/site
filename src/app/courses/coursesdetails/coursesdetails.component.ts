@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { CoursesService } from '../../services/courses.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-coursesdetails',
@@ -8,20 +9,17 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class CoursesdetailsComponent implements OnInit {
 
-  constructor(private readonly route: ActivatedRoute) { }
+  courses$: Observable<any>;
+ 
+  constructor (public _servicio: CoursesService) {
+    
+    this.courses$ = this._servicio.courses$()
 
-  ngOnInit(): void {
-    this.route.params
-    .subscribe(
-                      (res)=>{
-                        console.log(res)
-                      }
-
-
-
-
-
-    )
   }
 
+  ngOnInit(): void {
+    
+  }
 }
+
+  

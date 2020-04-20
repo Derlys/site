@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+import { CoursesService } from 'src/app/services/courses.service';
 
 @Component({
   selector: 'app-courseslist',
@@ -6,8 +8,12 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./courseslist.component.scss']
 })
 export class CourseslistComponent implements OnInit {
+  
+  courses$: Observable<any>;
 
-  constructor() { }
+  constructor(private service: CoursesService) {
+    this.courses$ = this.service.courses$()
+  }
 
   ngOnInit(): void {
   }
