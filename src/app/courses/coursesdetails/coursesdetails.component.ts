@@ -13,7 +13,7 @@ export class CoursesdetailsComponent implements OnInit {
  
   constructor (public _servicio: CoursesService) {
     
-    this.courses$ = this._servicio.courses$()
+    this.courses$ = this._servicio.courses
 
   }
 

@@ -5,6 +5,9 @@ import { CourseslistComponent } from './courseslist/courseslist.component';
 import { CoursesdetailsComponent } from './coursesdetails/coursesdetails.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './courses.routes';
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { environment } from 'src/environments/environment';
 
 @NgModule({
   declarations: [
@@ -13,7 +16,8 @@ import { routes } from './courses.routes';
   ],
   imports: [
     CommonModule,
-    RouterModule.forChild (routes)
+    RouterModule.forChild (routes),
+   
   ],
   exports:[
   CourseslistComponent,

@@ -1,15 +1,16 @@
 
-<div *ngIf="courses$ | async | keyvalue as courseList">
+<div *ngIf="courses$ | async  as courseList">
 
     
 
-    <div *ngFor="let course of courseList; let i= index">
+    <div *ngFor="let course of courseList">
+      
   
-<a [routerLink]="['/courses',i]">
-      <h2>{{course.value.title}}</h2>
+<a [routerLink]="['/courses',course.id]">
+      <h2>{{course.title}}</h2>
     </a>
-      <h3>{{course.value.descripcion}}</h3>
-      <h4>{{course.value.anthor_name}}</h4>
+      <h3>{{course.descripcion}}</h3>
+      <h4>{{course.anthor_name}}</h4>
     
     
     </div>

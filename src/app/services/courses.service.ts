@@ -1,18 +1,21 @@
 import { Injectable } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { AngularFirestore } from '@angular/fire/firestore';
+import { collectionData, docData, fromCollectionRef } from 'rxfire/firestore'
 
 @Injectable({
   providedIn: 'root'
 })
 export class CoursesService {
-  courses: any= [];
-   
-  constructor(private http: HttpClient) {}
-  
- 
-  courses$(): Observable<any> {
-    return this.http.get("https://site-d623a.firebaseio.com/.json")
+
+  courses: Observable<any[]>;
+  collectionRef: any;
+
+  constructor (private firestore: AngularFirestore) {
+    this.collectionRef = this.firestore.collection ("courses")
+    this.courses = collectionData(this.collectionRef.ref,"id")
+
   }
+  
 
 }
