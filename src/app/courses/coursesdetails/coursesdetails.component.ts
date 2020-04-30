@@ -10,16 +10,17 @@ import { Observable } from 'rxjs';
 export class CoursesdetailsComponent implements OnInit {
 
   courses$: Observable<any>;
- 
-  constructor (public _servicio: CoursesService) {
-    
-    this.courses$ = this._servicio.courses
+
+  // tslint:disable-next-line: variable-name
+  constructor(public _servicio: CoursesService) {
+
+    this.courses$ = this._servicio.courses;
 
   }
 
   ngOnInit(): void {
-    
+
   }
 }
 
-  
+

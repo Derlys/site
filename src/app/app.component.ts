@@ -19,6 +19,7 @@ export class AppComponent {
          {label:"About", path:"/about",icon:"fa-home"},
          {label:"Courses", path:"/courses",icon:"fa-home"},
          {label:"Contact", path:"/contact",icon:"fa-home"},
+         {label:"Login", path:"/login",icon:"fa-home"},
 
        ]
      },
