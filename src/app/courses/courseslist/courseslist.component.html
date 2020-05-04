@@ -1,22 +1,12 @@
-
-<div *ngIf="courses$ | async  as courseList">
-
-    
-
-    <div *ngFor="let course of courseList">
-      
-  
-<a [routerLink]="['/courses',course.id]">
-      <h2>{{course.title}}</h2>
+<div *ngIf="courses$ | async as courseList">
+  <div *ngFor="let course of courseList">
+    <img src="{{ course.author_img }}" />
+    <a [routerLink]="['/courses', course.id]">
+      <h2>{{ course.title }}</h2>
     </a>
-      <h3>{{course.descripcion}}</h3>
-      <h4>{{course.anthor_name}}</h4>
-    
-    
-    </div>
-
-    
   
+    <h3>{{ course.description }}</h3>
+ 
+    <h4>{{ course.author_name }}</h4>
   </div>
-  
-  
+</div>
