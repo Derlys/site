@@ -15,11 +15,11 @@ export class AppComponent {
      header:{
        style: "dark",
        links: [
-         {label:"Home", path:"/",icon:"fa-home"},
+         {label:"Home", path:"/",icon:'fa-home'},
          {label:"About", path:"/about",icon:"fa-home"},
          {label:"Courses", path:"/courses",icon:"fa-home"},
          {label:"Contact", path:"/contact",icon:"fa-home"},
-         {label:"Login", path:"/login",icon:"fa-home"},
+         {label:"Login", path:"/login",icon: "fa-home"},
 
        ]
      },
