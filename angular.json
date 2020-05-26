@@ -131,6 +131,10 @@
   },
   "defaultProject": "site",
   "cli": {
+<<<<<<< HEAD
     "analytics": "7232568f-0873-48d0-936e-733af6001661"
+=======
+    "analytics": false
+>>>>>>> 5981e4ccc6e651a167ad6166f854f908627dfec6
   }
 }

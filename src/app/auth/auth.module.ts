@@ -6,13 +6,15 @@ import { RegisterComponent } from './register/register.component';
 import { RouterModule } from '@angular/router';
 import { routes } from './auth.routes';
 import { UiFormModule } from '@kikstart/ui';
+import { LogoutComponent } from './logout/logout.component';
 
 
 
 @NgModule({
   declarations: [
     LoginComponent,
-    RegisterComponent
+    RegisterComponent,
+    LogoutComponent
   ],
   imports: [
     CommonModule,
