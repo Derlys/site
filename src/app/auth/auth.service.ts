@@ -27,7 +27,8 @@ export class AuthService {
   }
 
   loginGoogle() {
-    // this.afa
+    const provider = new firebase.auth.GoogleAuthProvider();
+    return from(this.afa.signInWithPopup(provider));
   }
 
   loginGithub() {
