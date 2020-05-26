@@ -26,4 +26,11 @@ export class LoginComponent implements OnInit {
       this.router.navigate(['/']);
     });
   }
+
+  loginGoogle() {
+    this.service.loginGoogle().subscribe((res) => {
+      console.log(res);
+      this.router.navigate(['/']);
+    });
+  }
 }
