@@ -17,7 +17,10 @@ export class LoginComponent implements OnInit {
 
   ngOnInit(): void {}
   login() {
-    this.service.login(this.model.email, this.model.password);
+    this.service.login(this.model.email, this.model.password).subscribe((res) => {
+      console.log(res);
+      this.router.navigate(['/']);
+    });
   }
 
   loginGithub() {

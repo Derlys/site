@@ -19,7 +19,7 @@ export class AuthService {
   }
 
   login(email: string, password: string) {
-    console.log({ email, password });
+    return from(this.afa.signInWithEmailAndPassword(email, password));
   }
 
   register(email: string, password: string) {
