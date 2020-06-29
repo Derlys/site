@@ -4,7 +4,7 @@ import { CommonModule } from '@angular/common';
 import { HomeComponent } from './home/home.component';
 import { AboutComponent } from './about/about.component';
 import { ContactComponent } from './contact/contact.component';
-import { UiHeroModule } from '@kikstart/ui';
+import { UiHeroModule } from '@kikstart-ui/ui-hero';
 
 @NgModule({
   declarations: [HomeComponent, AboutComponent, ContactComponent],

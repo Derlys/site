@@ -1,5 +1,5 @@
 import { FormGroup } from '@angular/forms';
-import { FormHelper } from '@kikstart/ui';
+import { FormHelper } from '@kikstart-ui/ui-form';
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
 
