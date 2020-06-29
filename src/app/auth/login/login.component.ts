@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { AuthService } from '../auth.service';
-import { FormHelper } from '@kikstart/ui';
 import { FormGroup } from '@angular/forms';
 import { Router } from '@angular/router';
+import { FormHelper } from '@kikstart-ui/ui-form';
 
 @Component({
   selector: 'app-login',
